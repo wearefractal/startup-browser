@@ -20,6 +20,8 @@
 
 ## Usage
 
+Buy the excellent [Startup Framework](http://designmodo.com/startup/) from designmodo
+
 `npm install -g startup-browser`
 
 `startup`

@@ -1,0 +1,159 @@
+<html>
+<head>
+    <link rel="shortcut icon" href="../../flat-ui/images/favicon.ico">
+
+    <link rel="stylesheet" href="../../flat-ui/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../flat-ui/bootstrap/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="../../flat-ui/css/flat-ui.css">
+<style>
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  font-family: arial;
+  font-size: 10px;
+  color: #6e6e6e;
+  background-color: #000;
+}
+
+a {
+  cursor: hand;
+}
+.header {
+  width: 100%;
+  height: 45px;
+  display: inline-block;
+}
+
+.header div, .header a {
+  margin-top: 15px;
+}
+
+.frame {
+  height: 100%;
+  width: 100%;
+}
+.next {
+  border: 0;
+  margin-right: 10px;
+  color: #666;
+  display: inline-block;
+  cursor: hand;
+  font-size: 12px;
+}
+.prev {
+  border: 0;
+  margin-left: 10px;
+  color: #666;
+  cursor: hand;
+  display: inline-block;
+  width:32%;
+  font-size: 12px;
+}
+.navbar {
+  width: 100%;
+  border: 0;
+  margin-top: 10px;
+}
+input[type=file] {
+  display:block;
+  height:0;
+  width:0;
+}
+.center {
+  text-align: center;
+  font-size: 14px;
+  display: inline-block;
+  width:32%;
+}
+</style>
+
+</head>
+<body>
+
+<input type="file" class = "cloneTo" multiple webkitdirectory />
+
+<div class="header">
+  <a class="prev pull-left">< Prev</a>
+  <div class = "center">
+    Sample 
+    <span class = "sampleNum">01</span>
+    <a class = "clone">Clone</a>
+  </div>
+
+  <a class="pull-right next">Next ></a>
+
+</div>
+
+<iframe class="frame" src ="/samples/sample-01/index.html"  frameborder="0" noresize="noresize">
+</iframe>
+
+</body>
+
+<script src="/flat-ui/js/jquery-1.8.3.min.js"></script>
+
+<script>
+$( document ).ready(function(){
+  
+  var sampleInt = 1;
+
+  var prev = function() { 
+    if (sampleInt > 1) {
+      sampleInt--;
+      return true;
+    }
+    else { return false; }
+  };
+
+  var next = function() { 
+    if (sampleInt < 25) {
+      sampleInt++; 
+      return true;
+    }
+    else { return false; }
+  };
+
+  var string = function() { 
+    if (sampleInt < 10) {
+      return "0" + sampleInt;
+    }
+    else { return sampleInt; }
+  };
+
+  var move = function(direction) {
+    if (direction()) {
+      console.log( sampleInt );
+      $('.frame').attr("src", 
+        "/samples/sample-" + string() + "/index.html"
+      );
+
+      $('.sampleNum').html(string());
+
+    }
+  }
+
+  $('.prev').click(move.bind(null, prev));
+  $('.next').click(move.bind(null, next));
+
+  $('.clone').click(function() {
+    var path = 
+      prompt("Clone sample-"+string()+" to", "~/sites/appName");
+
+    $.post("/clone", {sample: string(), path: path}, function(err, res){
+      console.log(err, res);
+    });
+
+    //$('input[type=file]').trigger('click');
+  });
+
+  $('.cloneTo').change(function(e){
+    console.log("cloned!", e)
+  });
+
+});
+
+</script>
+
+</html>

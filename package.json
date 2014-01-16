@@ -1,0 +1,33 @@
+{
+  "name": "startup-browser",
+  "description": "browse and clone startup framework samples",
+  "version": "0.0.1",
+  "homepage": "http://github.com/wearefractal/startup-browser",
+  "repository": "git://github.com/wearefractal/startup-browser.git",
+  "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
+  "main": "./index.js",
+  "dependencies": {
+    "coffee-script": "*",
+    "shelljs": "~0.2.6",
+    "express": "~3.4.8"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "bin": {
+    "startup": "./bin/cli.js"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/wearefractal/startup-browser/raw/master/LICENSE"
+    }
+  ]
+}

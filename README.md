@@ -26,9 +26,10 @@ cd to Startup Framework root dir and run 'startup'
 
 this will open startup-browser in a browser window
 
-[browser](https://i.cloudup.com/qbofDSZ261-1200x1200.jpeg)
-
 use the "Clone" link to clone a startup sample project to your desired path- it will pull in all the dependencies from common-files (renamed to 'startup') and flat-ui into /vendor
+
+![browser](https://i.cloudup.com/qbofDSZ261-1200x1200.jpeg)
+
 
 ## LICENSE
 

@@ -1,7 +1,3 @@
-[![Build Status](https://travis-ci.org/wearefractal/APPNAME.png?branch=master)](https://travis-ci.org/wearefractal/APPNAME)
-
-[![NPM version](https://badge.fury.io/js/APPNAME.png)](http://badge.fury.io/js/APPNAME)
-
 ## Information
 
 <table>
@@ -27,6 +23,8 @@ Buy the excellent [Startup Framework](http://designmodo.com/startup/) from desig
 `startup`
 
 run 'startup' in Startup Framework root dir
+
+use the "Clone" link to clone a startup sample project to your desired path- it will pull in all the dependencies from common-files (renamed to 'startup') and flat-ui into /vendor
 
 ## LICENSE
 

@@ -7,7 +7,6 @@ app = express()
 app.use express.query()
 app.use express.json()
 app.use express.urlencoded()
-console.log __dirname + '/public'
 app.use express.static(__dirname+'/public')
 app.use "/samples", express.static(path.resolve('./Developer/samples'))
 app.use "/common-files", express.static(path.resolve('./Developer/common-files'))

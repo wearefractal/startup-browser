@@ -1,7 +1,7 @@
 {
   "name": "startup-browser",
   "description": "browse and clone startup framework samples",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "http://github.com/wearefractal/startup-browser",
   "repository": "git://github.com/wearefractal/startup-browser.git",
   "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",

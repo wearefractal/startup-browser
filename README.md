@@ -18,13 +18,18 @@
 
 Buy the excellent [Startup Framework](http://designmodo.com/startup/) from designmodo
 
-`npm install -g startup-browser`
+`$ npm install -g startup-browser`
 
-`startup`
+cd into your downloaded Startup Framework root dir and run 'startup'
 
-run 'startup' in Startup Framework root dir
+`$ startup`
+
+you can now quickly browse through the samples
 
 use the "Clone" link to clone a startup sample project to your desired path- it will pull in all the dependencies from common-files (renamed to 'startup') and flat-ui into /vendor
+
+`cd` to your cloned dir and this is now a cloned copy of the sample, I suggest you use something like [lute](http://github.com/wearefractal/lute) to serve it with live reloading
+
 
 ## LICENSE
 

@@ -141,11 +141,14 @@ $( document ).ready(function(){
     var path = 
       prompt("Clone sample-"+string()+" to", "~/sites/appName");
 
-    $.post("/clone", {sample: string(), path: path}, function(err, res){
-      console.log(err, res);
-    });
+    if (path !== null) {
 
-    //$('input[type=file]').trigger('click');
+      $.post("/clone", {sample: string(), path: path}, function(err, res){
+        console.log(err, res);
+      });
+
+    }
+
   });
 
   $('.cloneTo').change(function(e){

@@ -26,7 +26,7 @@ Buy the excellent [Startup Framework](http://designmodo.com/startup/) from desig
 
 this will open startup-browser in a browser window and you can now quickly browse through the samples
 
-![browser](https://i.cloudup.com/qbofDSZ261-1200x1200.jpeg)
+![browser](https://i.cloudup.com/uuPqUbUbFl-3000x3000.png)
 
 use the "Clone" link to clone a startup sample project to your desired path- it will pull in all the dependencies from common-files (renamed to 'startup') and flat-ui into /vendor
 

@@ -1,7 +1,7 @@
 {
   "name": "startup-browser",
   "description": "browse and clone startup framework samples",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "homepage": "http://github.com/wearefractal/startup-browser",
   "repository": "git://github.com/wearefractal/startup-browser.git",
   "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
@@ -16,7 +16,7 @@
     "should": "*"
   },
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script"
+    "test": "mocha --compilers coffee:coffee-script/register"
   },
   "engines": {
     "node": ">= 0.4.0"
